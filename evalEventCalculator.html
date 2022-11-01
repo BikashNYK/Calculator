@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #8bd6b1;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vh;
+            height: 100vh;
+            margin: auto;
+        }
+
+        .form h1 {
+            position: absolute;
+            top: 30%;
+            font-size: x-large;
+        }
+
+        .textitem input {
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button .btn {
+            font-size: 30px;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Online Calculator</h1>
+        <form action="#" name="calc">
+            <div class="textitem"><input type="text" size="20" name="calculator" required></div>
+            <div class="button"><input type="button" name="B1" value="calculate" onclick="cal()" class="btn"></div>
+            <div class="button"><input type="reset" name="B2" value="reset" class="btn"></div>
+            <div class="textitem"><input type="text" name="answer" size="20"></div>
+        </form>
+    </div>
+
+    <script>
+        function cal() {
+            document.calc.answer.value = eval(document.calc.calculator.value);
+        }
+    </script>
+
+</body>
+
+</html>
